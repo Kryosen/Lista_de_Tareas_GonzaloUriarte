@@ -18,7 +18,7 @@ import { TasksListModule } from './tasks-list/tasks-list.module';
     SharedModule,
     TasksListModule,
   ],
-  providers: [],
+  providers: [TasksListModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

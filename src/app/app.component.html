@@ -1,19 +1,5 @@
 <app-title></app-title>
 <main>
-  <div class="divCaja">
-    <app-task-input></app-task-input>
-    <app-button-add></app-button-add>
-  </div>
-  <ul id="list">
-    <li>
-      <app-chech-box></app-chech-box>
-      <app-task-description></app-task-description>
-      <app-button-delete></app-button-delete>
-    </li>
-    <li>
-      <app-linethrough-box></app-linethrough-box>
-      <app-task-description></app-task-description>
-      <app-button-delete></app-button-delete>
-    </li>
-  </ul>
+  <app-task-add (sendTask)="receivetask($event)"> </app-task-add>
+  <app-tasks-list [item]="newTaskValue"> </app-tasks-list>
 </main>
