@@ -10,13 +10,9 @@ export class TaskComponent implements OnChanges {
 
   tasks: any[] = ['Task N', 'Task K'];
 
-  updateTask(value: string) {
-    this.tasks.push(value);
-  }
-
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['item'] && this.item) {
-      this.updateTask(this.item);
+    if (!changes['item'].isFirstChange()) {
+      this.tasks.push(this.item);
     }
   }
 }

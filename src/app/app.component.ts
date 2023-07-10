@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  }
   newTaskValue = '';
 
   receivetask(value: string) {
     this.newTaskValue = value;
-    console.log(this.newTaskValue);
   }
 }
