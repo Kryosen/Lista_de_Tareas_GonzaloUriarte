@@ -3,3 +3,7 @@ li {
   margin: 0.5rem;
   border: 2px solid black;
 }
+
+.checkedClass {
+  text-decoration: line-through;
+}
